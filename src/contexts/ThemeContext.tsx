@@ -12,25 +12,31 @@ const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined
 interface ThemeProviderProps {
   children: React.ReactNode;
   defaultTheme?: Theme;
-  switchable?: boolean;
 }
 
 export function ThemeProvider({
   children,
   defaultTheme = "light",
-  switchable = false,
 }: ThemeProviderProps) {
-  const [theme, setTheme] = React.useState<Theme>(defaultTheme);
+  const [theme, setTheme] = React.useState<Theme>(() => {
+    const saved = localStorage.getItem("theme");
+    if (saved === "light" || saved === "dark") return saved;
+    // Optional: check system preference
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return defaultTheme;
+  });
 
   React.useEffect(() => {
-    document.documentElement.classList.remove("light", "dark");
-    document.documentElement.classList.add(theme);
+    const root = window.document.documentElement;
+    root.classList.remove("light", "dark");
+    root.classList.add(theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    if (switchable) {
-      setTheme((prev) => (prev === "light" ? "dark" : "light"));
-    }
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
   return (

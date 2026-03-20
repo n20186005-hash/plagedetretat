@@ -17,9 +17,13 @@ i18n
       "zh-TW": { translation: zhTW },
       de: { translation: de },
     },
-    fallbackLng: "en",
+    fallbackLng: "zh-TW",
+    debug: true,
     interpolation: {
       escapeValue: false,
+    },
+    react: {
+      useSuspense: false,
     },
     detection: {
       order: ["localStorage", "navigator"],

@@ -11,9 +11,16 @@
     "open_24h": "Ouvert 24h/24",
     "title": "Plage de Galets Sous les",
     "title_line2": "Falaises de Craie Blanche",
-    "description": "Plage d'Étretat se trouve sur la côte d'Albâtre en Normandie, célèbre pour ses falaises de craie blanche, ses arches naturelles (\"Portes\") et la formation rocheuse emblématique de l'\"Aiguille\".",
+    "description": "Plage d'Étretat se trouve sur la côte d'Albâtre en Normandie, célèbre pour ses falaises de craie blanche, ses arches naturelles (\"Portes\") et la formation rocheuse emblématique de l'\"Aiguille\". Les jours ensoleillés ressemblent à des cartes postales, les jours nuageux à des films — mais quel que soit le temps, considérez les marées comme votre \"première règle\".",
     "cta_explore": "Explorer",
-    "cta_photos": "Voir les Photos"
+    "cta_photos": "Voir les Photos",
+    "address_label": "Adresse",
+    "plus_code_label": "Plus Code",
+    "keywords_label": "Mots-clés",
+    "keywords_value": "Falaises / Arches / Marées / Photographie",
+    "photo_label": "Photo",
+    "photo_location": "Côte d'Albâtre / Étretat",
+    "photo_source": "Unsplash"
   },
   "overview": {
     "kicker": "aperçu",
@@ -24,28 +31,38 @@
     "pebble_title": "Plage de Galets",
     "pebble_desc": "La plage est composée de galets, ce qui rend la marche plus difficile ; mais c'est précisément pourquoi il vaut mieux \"ralentir\" et écouter les vagues.",
     "tides_title": "Marées et Sécurité",
-    "tides_desc": "À marée basse, vous pouvez explorer les récifs et les grottes ; mais la marée haute peut vous piéger entre deux sections de falaises."
+    "tides_desc": "À marée basse, vous pouvez explorer les récifs et les grottes ; mais la marée haute peut vous piéger entre deux sections de falaises—vérifiez toujours les horaires des marées.",
+    "source_info": "Informations extraites de sources publiques (Tourisme Normandie/Office de Tourisme local et Wikipédia), combinées aux informations de base de Google Maps."
   },
   "photos": {
     "kicker": "photos",
     "title": "Galerie Photo",
-    "desc": "En suivant le rythme de Port de Honfleur : peu d'images mais raffinées, avec des légendes claires et une navigation simple."
+    "desc": "En suivant le rythme de Port de Honfleur : peu d'images mais raffinées, avec des légendes claires et une navigation simple.",
+    "alt1": "Porte d'Aval et les récifs à marée basse",
+    "alt2": "Plage de galets et falaises de craie blanche",
+    "alt3": "Côte sous la lumière du crépuscule",
+    "alt4": "Gros plan : arche et surface de la mer",
+    "source_info": "Photo · Unsplash"
   },
   "tips": {
     "kicker": "conseils de visite",
     "title": "Comment en Profiter Plus",
     "desc": "Divisez votre visite en 3 parties : Plage → Points de vue → Retour au village. La règle fondamentale : 'Vérifiez les marées, laissez du temps supplémentaire.'",
+    "quick_plan": "Quick plan",
     "quick_plan_title": "Demi-journée (Sans Presse)",
     "step1_title": "D'abord, trouvez votre rythme à la plage",
-    "step1_desc": "Marchez vers la zone d'observation ouverte, observez la ligne des vagues, la direction du vent et le flux de人群.",
+    "step1_desc": "Marchez vers la zone d'observation ouverte, observez la ligne des vagues, la direction du vent et le flux de personnes.",
     "step2_title": "Explorez les récifs à marée basse",
     "step2_desc": "Si vous prévoyez de vous rapprocher des arches/récifs, vous devez vérifier les horaires des marées à l'avance.",
     "step3_title": "Montez sur les sentiers des falaises pour des vues panoramiques",
     "step3_desc": "Du haut, l'arc de la côte et les changements de lumière sont les plus beaux, surtout au coucher du soleil.",
+    "safety": "Safety",
     "safety_title": "Rappel sur les Marées",
-    "safety_desc": "En marchant vers les arches, la marée haute peut bloquer votre chemin de retour. L'approche la plus sûre : entrez seulement pendant les fenêtres de marée basse.",
+    "safety_desc": "En marchant vers les arches, la marée haute peut bloquer votre chemin de retour. L'approche la plus sûre : n'entrez que pendant les fenêtres de marée basse, et prévoyez au moins 1 heure de marge pour votre retour.",
+    "safety_highlight": "n'entrez que pendant les fenêtres de marée basse",
+    "small_rules": "Small rules",
     "rule_title": "Ne Pas Emporter les Galets",
-    "rule_desc": "Les galets sont les \"amortisseurs naturels\" du littoral qui réduisent l'impact des tempêtes sur les digues."
+    "rule_desc": "Les galets sont les \"amortisseurs naturels\" du littoral qui réduisent l'impact des tempêtes sur les digues. Il est interdit de les ramasser ; faites des ricochets au lieu de les emporter."
   },
   "map": {
     "kicker": "carte",
@@ -61,12 +78,20 @@
     "open_hours": "Ouvert 24h/24",
     "open_hours_desc": "Front de mer public ; des sauveteurs peuvent être présents en été. Vérifiez les avis locaux à votre arrivée.",
     "best_light": "Meilleure Lumière",
-    "best_light_desc": "L'heure du coucher du soleil peint les falaises de calcaire de tons ambrés chauds. Arrivez 1 heure avant le coucher."
+    "best_light_desc": "L'heure du coucher du soleil peint les falaises de calcaire de tons ambrés chauds. Arrivez 1 heure avant le coucher.",
+    "plan_route": "Planifier l'itinéraire dans Google Maps"
   },
   "sources": {
     "kicker": "sources",
     "title": "Données et Références",
-    "desc": "Pour maintenir la crédibilité de l'information, nous ne citons que des pages accessibles au public."
+    "desc": "Pour maintenir la crédibilité de l'information, nous ne citons que des pages accessibles au public.",
+    "item1_title": "Google Maps (Informations de base)",
+    "item1_desc": "Notes, adresse, heures d'ouverture, etc. (peuvent changer)",
+    "item2_title": "Le Havre Étretat Normandie Tourisme",
+    "item2_desc": "Histoire de la plage, protection des galets et suggestions d'activités",
+    "item3_title": "Wikipédia : Site d'Étretat",
+    "item3_desc": "Structure géomorphologique et contexte sur les \"Portes/Aiguille\"",
+    "button_open": "Ouvrir"
   },
   "reviews": {
     "kicker": "avis",

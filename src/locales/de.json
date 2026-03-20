@@ -11,9 +11,16 @@
     "open_24h": "Rund um die Uhr geöffnet",
     "title": "Kieselstrand unter den",
     "title_line2": "weißen Kreidefelsen",
-    "description": "Plage d'Étretat liegt an der Côte d'Albâtre in der Normandie, bekannt für seine weißen Kreidefelsen, natürlichen Bögen (\"Tore\") und die ikonische \"Nadel\"-Felsformation.",
+    "description": "Plage d'Étretat liegt an der Côte d'Albâtre in der Normandie, bekannt für seine weißen Kreidefelsen, natürlichen Bögen (\"Tore\") und die ikonische \"Nadel\"-Felsformation. Sonnige Tage sehen aus wie Postkarten, bewölkte Tage fühlen sich an wie Filme – aber egal bei welchem Wetter, behandeln Sie die Gezeiten als Ihre \"erste Regel\".",
     "cta_explore": "Erkunden",
-    "cta_photos": "Fotos Ansehen"
+    "cta_photos": "Fotos Ansehen",
+    "address_label": "Adresse",
+    "plus_code_label": "Plus Code",
+    "keywords_label": "Schlüsselwörter",
+    "keywords_value": "Klippen / Bögen / Gezeiten / Fotografie",
+    "photo_label": "Foto",
+    "photo_location": "Alabasterküste / Étretat",
+    "photo_source": "Unsplash"
   },
   "overview": {
     "kicker": "übersicht",
@@ -24,17 +31,24 @@
     "pebble_title": "Kieselstrand",
     "pebble_desc": "Der Strand besteht aus Kieseln, was das Gehen erschwert; aber genau deshalb lohnt es sich, \"langsamer zu machen\" und den Wellen zu lauschen.",
     "tides_title": "Gezeiten & Sicherheit",
-    "tides_desc": "Bei Ebbe können Sie die Riffe und Höhlenbereiche erkunden; aber bei Flut könnten Sie zwischen zwei Felsabschnitten eingeschlossen werden."
+    "tides_desc": "Bei Ebbe können Sie die Riffe und Höhlenbereiche erkunden; aber bei Flut könnten Sie zwischen zwei Felsabschnitten eingeschlossen werden—prüfen Sie immer die Gezeiten.",
+    "source_info": "Informationen aus öffentlichen Quellen (Tourismusverband Normandie/lokaler Tourismusverband und Wikipedia) kombiniert mit Basisinformationen von Google Maps."
   },
   "photos": {
     "kicker": "fotos",
     "title": "Fotogalerie",
-    "desc": "Dem Rhythmus von Port de Honfleur folgend: wenige aber feine Bilder, mit klaren Beschriftungen und Navigation."
+    "desc": "Dem Rhythmus von Port de Honfleur folgend: wenige aber feine Bilder, mit klaren Beschriftungen und Navigation.",
+    "alt1": "Porte d'Aval und die Riffe bei Ebbe",
+    "alt2": "Kieselstrand und weiße Kreidefelsen",
+    "alt3": "Küste im Abendlicht",
+    "alt4": "Nahaufnahme: Bogen und Meeresoberfläche",
+    "source_info": "Foto · Unsplash"
   },
   "tips": {
     "kicker": "besuchstipps",
     "title": "Wie Sie Es Besser Genießen",
     "desc": "Teilen Sie Ihren Besuch in 3 Teile: Strand → Aussichtspunkte → Zurück in die Stadt. Die Kernregel: 'Gezeiten prüfen, Pufferzeit einplanen.'",
+    "quick_plan": "Quick plan",
     "quick_plan_title": "Halbtägige Route (Ohne Eile)",
     "step1_title": "Finden Sie zuerst Ihren Rhythmus am Strand",
     "step1_desc": "Gehen Sie zum offenen Aussichtsbereich, beobachten Sie die Wellenlinie, Windrichtung und Menschenfluss.",
@@ -42,10 +56,13 @@
     "step2_desc": "Wenn Sie planen, sich den Bögen/Riffen zu nähern, müssen Sie im Voraus die Gezeitenzeiten prüfen.",
     "step3_title": "Steigen Sie zu den Klippenwegen für Panoramablicke auf",
     "step3_desc": "Von oben ist die Böschung der Küstenlinie und Lichtveränderungen am schönsten, besonders bei Sonnenuntergang.",
+    "safety": "Safety",
     "safety_title": "Gezeiten-Erinnerung",
-    "safety_desc": "Wenn Sie in Richtung der Bögen gehen, kann die Flut Ihren Rückweg blockieren. Der sicherste Ansatz: nur bei Ebbe-Fenstern betreten.",
+    "safety_desc": "Wenn Sie in Richtung der Bögen gehen, kann die Flut Ihren Rückweg blockieren. Der sicherste Ansatz: nur bei Ebbe-Fenstern betreten, und mindestens 1 Stunde Pufferzeit für den Rückweg einplanen.",
+    "safety_highlight": "nur bei Ebbe-Fenstern betreten",
+    "small_rules": "Small rules",
     "rule_title": "Keine Kieselsteine Mitnehmen",
-    "rule_desc": "Kieselsteine sind die natürlichen \"Stoßdämpfer\" der Küste, die die Auswirkungen von Sturmfluten auf Deiche verringern."
+    "rule_desc": "Kieselsteine sind die natürlichen \"Stoßdämpfer\" der Küste, die die Auswirkungen von Sturmfluten auf Deiche verringern. Das Mitnehmen ist verboten; lassen Sie Steine hüpfen, anstatt sie mitzunehmen."
   },
   "map": {
     "kicker": "karte",
@@ -61,12 +78,20 @@
     "open_hours": "Rund um die Uhr geöffnet",
     "open_hours_desc": "Öffentliches Ufergebiet; Rettungsschwimmer können im Sommer anwesend sein. Prüfen Sie bei der Ankunft lokale Hinweise.",
     "best_light": "Bestes Licht",
-    "best_light_desc": "Die Stunde vor Sonnenuntergang taucht die Kalksteinfelsen in warme Bernsteintöne. Kommen Sie 1 Stunde vor Sonnenuntergang an."
+    "best_light_desc": "Die Stunde vor Sonnenuntergang taucht die Kalksteinfelsen in warme Bernsteintöne. Kommen Sie 1 Stunde vor Sonnenuntergang an.",
+    "plan_route": "Route in Google Maps planen"
   },
   "sources": {
     "kicker": "quellen",
     "title": "Daten & Referenzen",
-    "desc": "Um die Glaubwürdigkeit der Informationen zu wahren, zitieren wir nur öffentlich zugängliche Seiten."
+    "desc": "Um die Glaubwürdigkeit der Informationen zu wahren, zitieren wir nur öffentlich zugängliche Seiten.",
+    "item1_title": "Google Maps (Standort-Grundlagen)",
+    "item1_desc": "Bewertungen, Adresse, Öffnungszeiten usw. (können sich ändern)",
+    "item2_title": "Le Havre Étretat Normandie Tourisme",
+    "item2_desc": "Geschichte des Strandes, Kieselschutz und Aktivitätsvorschläge",
+    "item3_title": "Wikipedia: Site d'Étretat",
+    "item3_desc": "Geomorphologische Struktur und Hintergrundinfos zu den \"Toren/Nadel\"",
+    "button_open": "Öffnen"
   },
   "reviews": {
     "kicker": "bewertungen",

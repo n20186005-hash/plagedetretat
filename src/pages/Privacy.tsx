@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "wouter";
 import { Card } from "@/components/ui/card";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export function PrivacyPage() {
   const { t } = useTranslation();
@@ -14,16 +16,22 @@ export function PrivacyPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/55">
         <div className="mx-auto max-w-4xl px-4 py-4">
           <div className="flex items-center justify-between">
             <Link className="text-lg font-semibold" style={{ fontFamily: "Cormorant Garamond" }} href="/">
               Plage d'Étretat
             </Link>
-            <Link className="text-sm text-muted-foreground hover:text-foreground transition-colors" href="/">
-              ← {t('map.back_to_overview')}
-            </Link>
+            <div className="flex items-center gap-4">
+              <div className="hidden sm:flex items-center gap-2">
+                <ThemeToggle />
+                <LanguageSwitcher />
+              </div>
+              <Link className="text-sm text-muted-foreground hover:text-foreground transition-colors" href="/">
+                ← {t('map.back_to_overview')}
+              </Link>
+            </div>
           </div>
         </div>
       </header>

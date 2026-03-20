@@ -11,9 +11,16 @@
     "open_24h": "Open 24 Hours",
     "title": "Pebble Beach Beneath",
     "title_line2": "the White Chalk Cliffs",
-    "description": "Plage d'Étretat sits on Normandy's Côte d'Albâtre, famed for its white chalk cliffs, natural arches (\"Gates\"), and the iconic \"Needle\" rock formation.",
+    "description": "Plage d'Étretat sits on Normandy's Côte d'Albâtre, famed for its white chalk cliffs, natural arches (\"Gates\"), and the iconic \"Needle\" rock formation. Sunny days look like postcards, cloudy days feel like movies—but whatever the weather, treat the tides as your \"first rule\".",
     "cta_explore": "Explore",
-    "cta_photos": "View Photos"
+    "cta_photos": "View Photos",
+    "address_label": "Address",
+    "plus_code_label": "Plus Code",
+    "keywords_label": "Keywords",
+    "keywords_value": "Cliffs / Arches / Tides / Photography",
+    "photo_label": "Photo",
+    "photo_location": "Alabaster Coast / Étretat",
+    "photo_source": "Unsplash"
   },
   "overview": {
     "kicker": "overview",
@@ -24,17 +31,24 @@
     "pebble_title": "Pebble Beach",
     "pebble_desc": "The beach is made of pebbles, making walking harder; but that's exactly why it's better to \"slow down\" and listen to the waves.",
     "tides_title": "Tides & Safety",
-    "tides_desc": "At low tide you can explore the reefs and cave areas; but high tide may trap you between two sections of cliffs."
+    "tides_desc": "At low tide you can explore the reefs and cave areas; but high tide may trap you between two sections of cliffs—always check the tide times.",
+    "source_info": "Information extracted from public sources (Normandy Tourism/Local Tourism Office and Wikipedia), combined with basic info from Google Maps."
   },
   "photos": {
     "kicker": "photos",
     "title": "Photo Gallery",
-    "desc": "Following the rhythm of Port of Honfleur: few but refined images, with clear captions and navigation."
+    "desc": "Following the rhythm of Port of Honfleur: few but refined images, with clear captions and navigation.",
+    "alt1": "Porte d'Aval and the reefs at low tide",
+    "alt2": "Pebble beach and white chalk cliffs",
+    "alt3": "Coastline under evening light",
+    "alt4": "Close-up: arch and sea surface",
+    "source_info": "Photo · Unsplash"
   },
   "tips": {
     "kicker": "visiting tips",
     "title": "How to Enjoy It More",
     "desc": "Split your visit into 3 parts: Beach → Viewpoints → Back to town. The core rule: 'Check the tides, leave buffer time.'",
+    "quick_plan": "Quick plan",
     "quick_plan_title": "Half-Day Route (Unhurried)",
     "step1_title": "First, find your rhythm at the beach",
     "step1_desc": "Walk to the open viewing area, observe the wave line, wind direction, and crowd flow.",
@@ -42,10 +56,13 @@
     "step2_desc": "If you plan to get close to the arches/reefs, you must check the tide schedule in advance.",
     "step3_title": "Climb to cliff trails for panoramic views",
     "step3_desc": "From above, the coastline's arc and light changes are most beautiful, especially at sunset.",
+    "safety": "Safety",
     "safety_title": "Tide Reminder",
-    "safety_desc": "Walking toward the arches, high tide may block your return path. The safest approach: only enter during low tide windows.",
+    "safety_desc": "Walking toward the arches, high tide may block your return path. The safest approach: only enter during low tide windows, and leave at least 1 hour of buffer time for your return.",
+    "safety_highlight": "only enter during low tide windows",
+    "small_rules": "Small rules",
     "rule_title": "Don't Take Pebbles",
-    "rule_desc": "Pebbles are the coastline's natural \"shock absorbers\" that reduce storm surge impact on embankments."
+    "rule_desc": "Pebbles are the coastline's natural \"shock absorbers\" that reduce storm surge impact on embankments. Taking them is prohibited; skip stones instead of taking them home."
   },
   "map": {
     "kicker": "map",
@@ -61,12 +78,20 @@
     "open_hours": "24 Hours Open",
     "open_hours_desc": "Public waterfront; lifeguards may be present in summer. Check local notices on arrival.",
     "best_light": "Best Light",
-    "best_light_desc": "Sunset hour paints the limestone cliffs in warm amber tones. Arrive 1 hour before sunset."
+    "best_light_desc": "Sunset hour paints the limestone cliffs in warm amber tones. Arrive 1 hour before sunset.",
+    "plan_route": "Plan route in Google Maps"
   },
   "sources": {
     "kicker": "sources",
     "title": "Data & References",
-    "desc": "To keep information credible, we only cite publicly accessible pages."
+    "desc": "To keep information credible, we only cite publicly accessible pages.",
+    "item1_title": "Google Maps (Location Basics)",
+    "item1_desc": "Ratings, address, open hours, etc. (may change over time)",
+    "item2_title": "Le Havre Étretat Normandie Tourisme",
+    "item2_desc": "History of the beach, pebble protection, and activity suggestions",
+    "item3_title": "Wikipedia: Site d'Étretat",
+    "item3_desc": "Geomorphological structure and background info on the \"Gates/Needle\"",
+    "button_open": "Open"
   },
   "reviews": {
     "kicker": "reviews",
