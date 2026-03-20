@@ -32,7 +32,9 @@
       ]
     },
     "noImplicitAny": false,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "allowJs": true
   },
   "include": [
     "src"

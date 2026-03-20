@@ -43,6 +43,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { ReviewsSection } from "@/components/ReviewsSection";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 interface HomeProps {
   targetSection?: string;
@@ -87,36 +89,37 @@ export default function Home({ targetSection }: HomeProps) {
           <div className="flex items-center justify-between py-3">
             <div className="flex items-baseline gap-3">
               <div className="text-lg font-semibold" style={{ fontFamily: "Cormorant Garamond" }}>
-                Plage d’Étretat
+                Plage d'Étretat
               </div>
               <div className="hidden sm:block text-xs tracking-[0.18em] uppercase text-muted-foreground">
-                Côte d’Albâtre · Normandie
+                Côte d'Albâtre · Normandie
               </div>
             </div>
 
             <nav className="hidden md:flex items-center gap-6 text-sm">
               <Link className="hover:opacity-70" href="/overview">
-                概览
+                {t('nav.overview')}
               </Link>
               <Link className="hover:opacity-70" href="/photos">
-                照片
+                {t('nav.photos')}
               </Link>
               <Link className="hover:opacity-70" href="/tips">
-                玩法
+                {t('nav.tips')}
               </Link>
               <Link className="hover:opacity-70" href="/map">
-                地图
+                {t('nav.map')}
               </Link>
             </nav>
 
             <div className="flex items-center gap-2">
+              <LanguageSwitcher />
               <Button asChild variant="outline" className="hidden sm:inline-flex">
                 <a
                   href="https://maps.app.goo.gl/cWvY5GHW8PGgS7M8A"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  打开 Google Maps <ArrowUpRight className="ml-2 h-4 w-4" />
+                  Google Maps <ArrowUpRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
               <Button asChild className="md:hidden" size="sm">
@@ -483,6 +486,8 @@ export default function Home({ targetSection }: HomeProps) {
           </div>
         </section>
 
+        <ReviewsSection />
+
         {/* SOURCES */}
         <section id="sources" className="scroll-mt-24">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
@@ -547,14 +552,24 @@ export default function Home({ targetSection }: HomeProps) {
         </section>
 
         <footer className="border-t">
-          <div className="mx-auto max-w-6xl px-4 py-8">
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-              <div className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} Plage d’Étretat Guide · 静态页面示例
+          <div className="mx-auto max-w-6xl px-4 py-6">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+              <div className="flex flex-col sm:flex-row items-center gap-2 text-sm text-muted-foreground">
+                <span>{t('footer.contact')}</span>
+                <a href="mailto:claritleonelmnicol@gmail.com" className="hover:text-foreground transition-colors">
+                  claritleonelmnicol@gmail.com
+                </a>
               </div>
               <div className="text-xs text-muted-foreground">
-                参考布局：Port of Honfleur · 图片：Unsplash
+                {t('footer.copyright')}
               </div>
+            </div>
+            <div className="mt-4 flex justify-center gap-4 text-xs text-muted-foreground">
+              <Link href="/privacy" className="hover:text-foreground transition-colors">{t('nav.overview')}</Link>
+              <span>·</span>
+              <Link href="/terms" className="hover:text-foreground transition-colors">Terms</Link>
+              <span>·</span>
+              <Link href="/cookies" className="hover:text-foreground transition-colors">Cookies</Link>
             </div>
           </div>
         </footer>
