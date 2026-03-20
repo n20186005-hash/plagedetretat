@@ -117,7 +117,7 @@ export default function Home({ targetSection }: HomeProps) {
               <LanguageSwitcher />
               <Button asChild variant="outline" className="hidden sm:inline-flex">
                 <a
-                  href="https://maps.app.goo.gl/cWvY5GHW8PGgS7M8A"
+                  href="https://maps.app.goo.gl/sw5m78auZzjF1r61A"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -419,10 +419,10 @@ export default function Home({ targetSection }: HomeProps) {
               <p className="mt-3 text-lg text-muted-foreground max-w-2xl">{t('map.desc')}</p>
             </div>
 
-            <div className="w-full h-[500px] md:h-[600px] rounded-xl shadow-lg overflow-hidden dark:brightness-90 dark:contrast-125 transition-all">
+            <div className="w-full h-[500px] md:h-[600px] rounded-xl shadow-lg overflow-hidden dark:brightness-90 dark:contrast-125 transition-all mx-auto">
               <iframe
-                title="Port of Honfleur - Google Maps"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300.37837020835275!2d0.2327356724879831!3d49.420009907273084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e033bbbc1fa09f%3A0xb3180f46d65c5a9a!2sPort%20of%20Honfleur!5e0!3m2!1sen!2sus!4v1774000008561!5m2!1sen!2sus"
+                title="Plage d'Étretat - Google Maps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2580.1311412193795!2d0.19925661348728868!3d49.70833277134085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e0174633854715%3A0x15ccbd9429fabd22!2zUGxhZ2UgZOKAmcOJdHJldGF0!5e0!3m2!1sen!2sus!4v1774005977899!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -476,7 +476,7 @@ export default function Home({ targetSection }: HomeProps) {
                 </Card>
                 <Button asChild className="w-full h-12 text-base font-medium bg-[#1a365d] hover:bg-[#2d4a7c] dark:bg-primary dark:hover:bg-primary/90 text-white rounded-xl shadow-md transition-all hover:shadow-lg">
                   <a
-                    href="https://www.google.com/maps/dir/?api=1&destination=Port+of+Honfleur,France"
+                    href="https://maps.app.goo.gl/sw5m78auZzjF1r61A"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -504,7 +504,7 @@ export default function Home({ targetSection }: HomeProps) {
                   </div>
                   <Button asChild variant="outline" size="sm">
                     <a
-                      href="https://maps.app.goo.gl/cWvY5GHW8PGgS7M8A"
+                      href="https://maps.app.goo.gl/sw5m78auZzjF1r61A"
                       target="_blank"
                       rel="noreferrer"
                     >
