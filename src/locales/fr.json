@@ -122,7 +122,14 @@
   },
   "footer": {
     "contact": "Pour le support technique de ce site web, veuillez contacter :",
-    "copyright": "© 2026 Plage d'Étretat Guide · Tous droits réservés."
+    "copyright": "© 2026 Plage d'Étretat Guide · Tous droits réservés.",
+    "disclaimer": "Ce site web est un guide d'information touristique tiers indépendant, visant à fournir aux visiteurs un contexte historique objectif et des suggestions de voyage, et n'est pas affilié à l'organisme de gestion officiel de la Plage d'Étretat. Pour l'achat de billets officiels, veuillez visiter les canaux officiels."
+  },
+  "about": {
+    "title": "À Propos du Guide Plage d'Étretat",
+    "content1": "Bienvenue sur le guide indépendant de la Plage d'Étretat ! Notre mission est de fournir des informations complètes, objectives et à jour pour vous aider à planifier votre visite de cette magnifique merveille naturelle.",
+    "content2": "Nous sommes passionnés par Étretat et ses falaises de craie uniques, ses arches naturelles et ses plages de galets. Ce site web est un travail d'amour, créé par des passionnés pour partager la beauté et des conseils pratiques pour explorer cette destination française emblématique.",
+    "content3": "Veuillez noter que ce site web n'est pas affilié à l'organisme de gestion officiel de la Plage d'Étretat. Pour des informations officielles, des billets ou des réglementations spécifiques, nous vous recommandons toujours de consulter les ressources touristiques locales officielles."
   },
   "privacy": {
     "title": "Politique de Confidentialité",

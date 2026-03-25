@@ -122,7 +122,14 @@
   },
   "footer": {
     "contact": "Für technischen Support dieser Website kontaktieren Sie bitte:",
-    "copyright": "© 2026 Plage d'Étretat Guide · Alle Rechte vorbehalten."
+    "copyright": "© 2026 Plage d'Étretat Guide · Alle Rechte vorbehalten.",
+    "disclaimer": "Diese Website ist ein unabhängiger Reiseführer Dritter, der Besuchern objektive historische Hintergründe und Reisetipps bieten soll und nicht mit der offiziellen Verwaltungsstelle des Plage d'Étretat verbunden ist. Für offizielle Ticketkäufe besuchen Sie bitte die offiziellen Kanäle."
+  },
+  "about": {
+    "title": "Über den Plage d'Étretat Guide",
+    "content1": "Willkommen beim unabhängigen Reiseführer für Plage d'Étretat! Unsere Mission ist es, umfassende, objektive und aktuelle Informationen bereitzustellen, um Ihnen bei der Planung Ihres Besuchs dieses großartigen Naturwunders zu helfen.",
+    "content2": "Wir sind begeistert von Étretat und seinen einzigartigen Kreidefelsen, natürlichen Bögen und Kieselstränden. Diese Website ist eine Herzensangelegenheit, die von Enthusiasten erstellt wurde, um die Schönheit und praktische Tipps zur Erkundung dieses ikonischen französischen Reiseziels zu teilen.",
+    "content3": "Bitte beachten Sie, dass diese Website nicht mit der offiziellen Verwaltungsstelle des Plage d'Étretat verbunden ist. Für offizielle Informationen, Tickets oder spezifische Vorschriften empfehlen wir Ihnen immer, offizielle lokale Tourismusressourcen zu konsultieren."
   },
   "privacy": {
     "title": "Datenschutzrichtlinie",

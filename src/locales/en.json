@@ -122,7 +122,14 @@
   },
   "footer": {
     "contact": "For technical support of this website, please contact:",
-    "copyright": "© 2026 Plage d'Étretat Guide · All rights reserved."
+    "copyright": "© 2026 Plage d'Étretat Guide · All rights reserved.",
+    "disclaimer": "This website is an independent third-party travel information guide, aiming to provide visitors with objective historical background and travel suggestions, and is not affiliated with the official management body of Plage d'Étretat. For official ticket purchases, please visit official channels."
+  },
+  "about": {
+    "title": "About Plage d'Étretat Guide",
+    "content1": "Welcome to the independent guide for Plage d'Étretat! Our mission is to provide comprehensive, objective, and up-to-date information to help you plan your visit to this magnificent natural wonder.",
+    "content2": "We are passionate about Étretat and its unique chalk cliffs, natural arches, and pebble beaches. This website is a labor of love, created by enthusiasts to share the beauty and practical tips for exploring this iconic French destination.",
+    "content3": "Please note that this website is not affiliated with the official management body of Plage d'Étretat. For official information, tickets, or specific regulations, we always recommend consulting official local tourism resources."
   },
   "privacy": {
     "title": "Privacy Policy",

@@ -556,6 +556,9 @@ export default function Home({ targetSection }: HomeProps) {
         <footer className="border-t">
           <div className="mx-auto max-w-6xl px-4 py-6">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+              <div className="text-xs text-muted-foreground mb-2 sm:mb-0">
+                {t('footer.disclaimer')}
+              </div>
               <div className="flex flex-col sm:flex-row items-center gap-2 text-sm text-muted-foreground">
                 <span>{t('footer.contact')}</span>
                 <a href="mailto:claritleonelmnicol@gmail.com" className="hover:text-foreground transition-colors">
@@ -567,6 +570,8 @@ export default function Home({ targetSection }: HomeProps) {
               </div>
             </div>
             <div className="mt-4 flex justify-center gap-4 text-xs text-muted-foreground">
+              <Link href="/about" className="hover:text-foreground transition-colors">{t('about.title')}</Link>
+              <span>·</span>
               <Link href="/privacy" className="hover:text-foreground transition-colors">{t('privacy.title')}</Link>
               <span>·</span>
               <Link href="/terms" className="hover:text-foreground transition-colors">{t('terms.title')}</Link>

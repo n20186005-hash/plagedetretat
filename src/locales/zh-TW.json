@@ -122,7 +122,14 @@
   },
   "footer": {
     "contact": "如需本網站的技術支持，請聯繫：",
-    "copyright": "© 2026 Plage d'Étretat Guide · 版權所有。"
+    "copyright": "© 2026 Plage d'Étretat Guide · 版權所有。",
+    "disclaimer": "本網站是一個獨立的第三方旅遊資訊指南，旨在為遊客提供客觀的歷史背景與遊覽建議，與 Plage d'Étretat 的官方管理機構無關。如需購買官方門票，請訪問官方渠道。"
+  },
+  "about": {
+    "title": "關於 Plage d'Étretat 指南",
+    "content1": "歡迎來到 Plage d'Étretat 的獨立指南！我們的使命是提供全面、客觀和最新的資訊，幫助您規劃這趟壯麗自然奇觀之旅。",
+    "content2": "我們對 Étretat 及其獨特的白堊懸崖、天然拱門和鵝卵石海灘充滿熱情。本網站是愛好者們的心血結晶，旨在分享探索這個標誌性法國目的地的美麗和實用技巧。",
+    "content3": "請注意，本網站不隸屬於 Plage d'Étretat 的官方管理機構。有關官方資訊、門票或具體規定，我們始終建議您查閱官方當地旅遊資源。"
   },
   "privacy": {
     "title": "隱私政策",

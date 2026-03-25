@@ -8,11 +8,13 @@ import Home from "@/pages/Home";
 import { PrivacyPage } from "@/pages/Privacy";
 import { TermsPage } from "@/pages/Terms";
 import { CookiesPage } from "@/pages/Cookies";
+import About from "@/pages/About";
 
 function AppRouter() {
   return (
     <Router hook={useHashLocation}>
       <Switch>
+        <Route path="/about" component={About} />
         <Route path="/privacy" component={PrivacyPage} />
         <Route path="/terms" component={TermsPage} />
         <Route path="/cookies" component={CookiesPage} />
