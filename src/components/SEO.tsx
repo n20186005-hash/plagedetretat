@@ -17,6 +17,7 @@ export function SEO() {
     let langPrefix = '';
     if (lang === 'en') langPrefix = '/en';
     if (lang === 'de') langPrefix = '/de';
+    if (lang === 'nl') langPrefix = '/nl';
     if (lang === 'zh-TW') langPrefix = '/zh'; // Using zh for Chinese
     // fr is default, so no prefix.
     
@@ -41,6 +42,7 @@ export function SEO() {
       <link rel="alternate" hrefLang="fr" href={getUrl('fr')} />
       <link rel="alternate" hrefLang="en" href={getUrl('en')} />
       <link rel="alternate" hrefLang="de" href={getUrl('de')} />
+      <link rel="alternate" hrefLang="nl" href={getUrl('nl')} />
       <link rel="alternate" hrefLang="zh" href={getUrl('zh-TW')} />
       <link rel="alternate" hrefLang="x-default" href={getUrl('fr')} />
     </Helmet>
