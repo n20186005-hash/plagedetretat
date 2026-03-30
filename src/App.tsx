@@ -1,8 +1,9 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Router, Route, Switch } from "wouter";
-import { useHashLocation } from "wouter/use-hash-location";
+import { Router, Route, Switch, useLocation } from "wouter";
 import { HelmetProvider } from "react-helmet-async";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { SEO } from "@/components/SEO";
@@ -13,8 +14,24 @@ import { CookiesPage } from "@/pages/Cookies";
 import About from "@/pages/About";
 
 function AppRouter() {
+  const [location] = useLocation();
+  const { i18n } = useTranslation();
+
+  // Extract language from URL path (e.g., /en/about -> en)
+  const segments = location.split('/');
+  const langPrefix = ['en', 'de', 'nl', 'zh'].includes(segments[1]) ? `/${segments[1]}` : '';
+
+  // Sync i18n language with URL
+  useEffect(() => {
+    const urlLang = langPrefix.replace('/', '');
+    const targetLang = urlLang === 'zh' ? 'zh-TW' : urlLang || 'fr';
+    if (i18n.language !== targetLang) {
+      i18n.changeLanguage(targetLang);
+    }
+  }, [langPrefix, i18n]);
+
   return (
-    <Router hook={useHashLocation}>
+    <Router base={langPrefix}>
       <SEO />
       <Switch>
         <Route path="/about" component={About} />

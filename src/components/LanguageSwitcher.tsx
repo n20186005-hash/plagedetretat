@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import { useLocation } from "wouter";
 
 const languages = [
   { code: "en", label: "English" },
@@ -12,6 +13,7 @@ const languages = [
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation();
+  const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -28,8 +30,17 @@ export function LanguageSwitcher() {
   }, []);
 
   const handleLanguageChange = (code: string) => {
-    i18n.changeLanguage(code);
     setIsOpen(false);
+    
+    // Redirect to the language specific URL instead of just changing i18n state
+    let newPrefix = '';
+    if (code === 'en') newPrefix = '/en';
+    if (code === 'de') newPrefix = '/de';
+    if (code === 'nl') newPrefix = '/nl';
+    if (code === 'zh-TW') newPrefix = '/zh';
+
+    const newPath = location === '/' ? '' : location;
+    window.location.href = newPrefix + newPath || '/';
   };
 
   return (

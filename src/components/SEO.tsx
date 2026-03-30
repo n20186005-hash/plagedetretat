@@ -1,16 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
-import { useHashLocation } from 'wouter/use-hash-location';
+import { useLocation } from 'wouter';
 
 export function SEO() {
   const { i18n } = useTranslation();
-  const [location] = useHashLocation();
+  const [location] = useLocation();
 
   const domain = 'https://plagedetretat.com';
   
-  // Format the path correctly. We map hash routing paths to normal paths for SEO.
-  // For instance, /#/about becomes /about
-  // Note: For true SEO indexing, standard URL paths are better than hash routing.
+  // Format the path correctly.
   const path = location === '/' ? '' : location;
 
   const getUrl = (lang: string) => {
