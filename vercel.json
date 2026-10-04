@@ -3,6 +3,27 @@
   "outputDirectory": "dist",
   "framework": null,
   "installCommand": "pnpm install",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "plagedetretat.com" }
+      ],
+      "destination": "https://www.plagedetretat.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/com",
+      "destination": "https://www.plagedetretat.com/",
+      "permanent": true
+    },
+    {
+      "source": "/com/:path*",
+      "destination": "https://www.plagedetretat.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]

@@ -62,7 +62,7 @@ function SectionTitle(props: { kicker: string; title: string; desc?: string }) {
 }
 
 export default function Home({ targetSection }: HomeProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     if (targetSection) {
@@ -98,16 +98,16 @@ export default function Home({ targetSection }: HomeProps) {
             </div>
 
             <nav className="hidden md:flex items-center gap-6 text-sm">
-              <Link className="hover:opacity-70" href="/overview">
+              <Link className="hover:opacity-70" href="/overview/">
                 {t('nav.overview')}
               </Link>
-              <Link className="hover:opacity-70" href="/photos">
+              <Link className="hover:opacity-70" href="/photos/">
                 {t('nav.photos')}
               </Link>
-              <Link className="hover:opacity-70" href="/tips">
+              <Link className="hover:opacity-70" href="/tips/">
                 {t('nav.tips')}
               </Link>
-              <Link className="hover:opacity-70" href="/map">
+              <Link className="hover:opacity-70" href="/map/">
                 {t('nav.map')}
               </Link>
             </nav>
@@ -168,12 +168,40 @@ export default function Home({ targetSection }: HomeProps) {
 
                 <div className="mt-7 flex flex-wrap gap-3">
                   <Button asChild>
-                    <Link href="/overview">{t('hero.cta_explore')}</Link>
+                    <Link href="/overview/">{t('hero.cta_explore')}</Link>
                   </Button>
                   <Button asChild variant="outline">
-                    <Link href="/photos">{t('hero.cta_photos')}</Link>
+                    <Link href="/photos/">{t('hero.cta_photos')}</Link>
                   </Button>
+                  {i18n.language === "fr" ? (
+                    <Button asChild variant="outline">
+                      <Link href="/que-faire-etretat/">Que faire à Étretat</Link>
+                    </Button>
+                  ) : null}
                 </div>
+
+                {i18n.language === "fr" ? (
+                  <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                    <Link href="/marees-etretat/" className="rounded-2xl border bg-card/60 px-4 py-3 text-sm transition-colors hover:bg-card">
+                      Marées à Étretat
+                    </Link>
+                    <Link href="/parking-etretat/" className="rounded-2xl border bg-card/60 px-4 py-3 text-sm transition-colors hover:bg-card">
+                      Parking à Étretat
+                    </Link>
+                    <Link href="/falaises-etretat/" className="rounded-2xl border bg-card/60 px-4 py-3 text-sm transition-colors hover:bg-card">
+                      Falaises d&apos;Étretat
+                    </Link>
+                    <Link href="/etretat-en-1-jour/" className="rounded-2xl border bg-card/60 px-4 py-3 text-sm transition-colors hover:bg-card">
+                      Étretat en 1 jour
+                    </Link>
+                    <Link href="/points-photo-etretat/" className="rounded-2xl border bg-card/60 px-4 py-3 text-sm transition-colors hover:bg-card">
+                      Points photo à Étretat
+                    </Link>
+                    <Link href="/etretat-avec-enfants/" className="rounded-2xl border bg-card/60 px-4 py-3 text-sm transition-colors hover:bg-card">
+                      Étretat avec enfants
+                    </Link>
+                  </div>
+                ) : null}
 
                 <div className="mt-10 grid gap-3 sm:grid-cols-3">
                   <Card className="hairline rounded-2xl p-4 bg-card/70">
@@ -570,13 +598,13 @@ export default function Home({ targetSection }: HomeProps) {
               </div>
             </div>
             <div className="mt-4 flex justify-center gap-4 text-xs text-muted-foreground">
-              <Link href="/about" className="hover:text-foreground transition-colors">{t('about.title')}</Link>
+              <Link href="/about/" className="hover:text-foreground transition-colors">{t('about.title')}</Link>
               <span>·</span>
-              <Link href="/privacy" className="hover:text-foreground transition-colors">{t('privacy.title')}</Link>
+              <Link href="/privacy/" className="hover:text-foreground transition-colors">{t('privacy.title')}</Link>
               <span>·</span>
-              <Link href="/terms" className="hover:text-foreground transition-colors">{t('terms.title')}</Link>
+              <Link href="/terms/" className="hover:text-foreground transition-colors">{t('terms.title')}</Link>
               <span>·</span>
-              <Link href="/cookies" className="hover:text-foreground transition-colors">{t('cookies.title')}</Link>
+              <Link href="/cookies/" className="hover:text-foreground transition-colors">{t('cookies.title')}</Link>
             </div>
           </div>
         </footer>

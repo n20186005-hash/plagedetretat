@@ -2,14 +2,9 @@ import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useLocation } from "wouter";
+import { buildLocalizedPath, normalizePath, SUPPORTED_LANGUAGES } from "@/lib/site";
 
-const languages = [
-  { code: "en", label: "English" },
-  { code: "fr", label: "Français" },
-  { code: "zh-TW", label: "繁體中文" },
-  { code: "de", label: "Deutsch" },
-  { code: "nl", label: "Nederlands" },
-];
+const languages = SUPPORTED_LANGUAGES.map(({ code, label }) => ({ code, label }));
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation();
@@ -31,16 +26,7 @@ export function LanguageSwitcher() {
 
   const handleLanguageChange = (code: string) => {
     setIsOpen(false);
-    
-    // Redirect to the language specific URL instead of just changing i18n state
-    let newPrefix = '';
-    if (code === 'en') newPrefix = '/en';
-    if (code === 'de') newPrefix = '/de';
-    if (code === 'nl') newPrefix = '/nl';
-    if (code === 'zh-TW') newPrefix = '/zh';
-
-    const newPath = location === '/' ? '' : location;
-    window.location.href = newPrefix + newPath || '/';
+    window.location.href = buildLocalizedPath(code, normalizePath(location));
   };
 
   return (

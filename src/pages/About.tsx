@@ -34,11 +34,11 @@ function About() {
         <div className="container mx-auto px-6 text-center text-sm text-muted-foreground">
           <p>{t('footer.copyright')}</p>
           <div className="flex justify-center space-x-4 mt-4">
-            <Link href="/privacy" className="hover:text-foreground transition-colors">{t('privacy.title')}</Link>
+            <Link href="/privacy/" className="hover:text-foreground transition-colors">{t('privacy.title')}</Link>
             <span>·</span>
-            <Link href="/terms" className="hover:text-foreground transition-colors">{t('terms.title')}</Link>
+            <Link href="/terms/" className="hover:text-foreground transition-colors">{t('terms.title')}</Link>
             <span>·</span>
-            <Link href="/cookies" className="hover:text-foreground transition-colors">{t('cookies.title')}</Link>
+            <Link href="/cookies/" className="hover:text-foreground transition-colors">{t('cookies.title')}</Link>
           </div>
         </div>
       </footer>

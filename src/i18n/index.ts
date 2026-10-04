@@ -7,6 +7,8 @@ import fr from "../locales/fr.json";
 import zhTW from "../locales/zh-TW.json";
 import de from "../locales/de.json";
 import nl from "../locales/nl.json";
+import it from "../locales/it.json";
+import es from "../locales/es.json";
 
 i18n
   .use(LanguageDetector)
@@ -18,6 +20,8 @@ i18n
       "zh-TW": { translation: zhTW },
       de: { translation: de },
       nl: { translation: nl },
+      it: { translation: it },
+      es: { translation: es },
     },
     fallbackLng: "zh-TW",
     debug: true,

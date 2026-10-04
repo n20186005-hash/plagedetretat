@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://plagedetretat.com/sitemap.xml
+Sitemap: https://www.plagedetretat.com/sitemap.xml
