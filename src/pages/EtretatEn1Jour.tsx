@@ -1,3 +1,4 @@
+import { CoastalNotice } from "@/components/CoastalNotice";
 import { Link } from "wouter";
 import { ArrowUpRight, Camera, Clock3, Route, Waves } from "lucide-react";
 
@@ -9,18 +10,19 @@ const itinerary = [
   "Arriver tôt pour régler le parking avant l'affluence.",
   "Commencer par le front de mer pour lire la lumière, le vent et les marées.",
   "Monter ensuite sur la falaise d'Amont pour la vue d'ensemble la plus rentable.",
-  "Redescendre vers la plage ou le centre selon la marée et votre énergie.",
+  "Revenir vers la promenade ou le centre ; accéder uniquement aux zones ouvertes et autorisées, selon votre énergie.",
   "Finir la journée sur un point haut ou dans le village si vous restez jusqu'en fin d'après-midi.",
 ] as const;
 
 export default function EtretatEn1JourPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <CoastalNotice />
       <section className="border-b bg-card/35">
         <div className="mx-auto max-w-5xl px-4 py-12 sm:py-16">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="secondary" className="rounded-full">Étretat en 1 jour</Badge>
-            <Badge variant="secondary" className="rounded-full">Dernière vérification : 4 octobre 2026</Badge>
+            <Badge variant="secondary" className="rounded-full">Dernière vérification : 2 novembre 2026</Badge>
           </div>
 
           <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
@@ -86,8 +88,7 @@ export default function EtretatEn1JourPage() {
                 À ajuster selon les marées
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Si vous voulez approcher les arches depuis la plage, vérifiez d&apos;abord la basse mer et gardez du temps
-                pour revenir. Si les horaires sont mauvais, basculez plutôt la visite sur les falaises et le centre-ville.
+                Les arches se contemplent depuis la promenade et les points de vue autorisés. Ne prévoyez aucun passage sous les falaises ou dans les tunnels : les interdictions restent applicables à basse mer. Adaptez votre sortie aux fermetures et à la météo.
               </p>
             </Card>
 

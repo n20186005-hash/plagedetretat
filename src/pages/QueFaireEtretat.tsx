@@ -1,3 +1,4 @@
+import { CoastalNotice } from "@/components/CoastalNotice";
 import { Link } from "wouter";
 import { ArrowUpRight, Camera, Church, Landmark, MapPinned, Mountain, ParkingCircle, Route, Waves } from "lucide-react";
 
@@ -41,22 +42,23 @@ const places = [
 const itinerary = [
   "Arriver tôt et viser d'abord le front de mer pour éviter le stress du stationnement.",
   "Monter ensuite sur la falaise d'Amont pour une vue d'ensemble et de meilleures photos.",
-  "Revenir vers la plage à marée basse si vous voulez observer les arches de plus près.",
+  "Revenir sur la digue pour observer les arches à distance, sans emprunter les tunnels ni le pied des falaises.",
   "Garder la fin de journée pour la falaise d'Aval ou le centre-ville selon la lumière et la fatigue.",
 ];
 
 export default function QueFaireEtretatPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <CoastalNotice />
       <section className="border-b bg-card/35">
         <div className="mx-auto max-w-5xl px-4 py-12 sm:py-16">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="secondary" className="rounded-full">Guide pratique</Badge>
-            <Badge variant="secondary" className="rounded-full">Dernière vérification : 4 octobre 2026</Badge>
+            <Badge variant="secondary" className="rounded-full">Dernière vérification : 2 novembre 2026</Badge>
           </div>
 
           <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
-            Que faire à Étretat : 12 idées pour voir les falaises, la plage et les plus beaux points de vue
+            Que faire à Étretat : 6 étapes pour voir les falaises, la plage et les plus beaux points de vue
           </h1>
 
           <p className="mt-5 max-w-3xl text-base text-muted-foreground sm:text-lg">
@@ -102,7 +104,7 @@ export default function QueFaireEtretatPage() {
                 Avant de partir
               </div>
               <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-                <li>Vérifiez les marées avant toute marche au pied des falaises.</li>
+                <li>Ne marchez pas sous les falaises : les interdictions restent applicables à marée basse.</li>
                 <li>Prévoyez des chaussures adaptées aux galets et aux pentes.</li>
                 <li>En voiture, visez les parkings extérieurs au centre pour gagner du temps.</li>
                 <li>Par beau temps, les falaises sont plus agréables tôt le matin ou avant le coucher du soleil.</li>
@@ -142,8 +144,7 @@ export default function QueFaireEtretatPage() {
               </div>
               <p className="mt-4 text-sm text-muted-foreground">
                 Pour une première visite, la falaise d'Amont reste le point de vue le plus simple et le plus complet.
-                Si vous cherchez l'image la plus célèbre d'Étretat, combinez la plage à marée basse avec un passage
-                sur les hauteurs pour voir la Porte d'Aval et l'Aiguille sous deux angles différents.
+                Combinez la promenade avec les points de vue autorisés pour voir la Porte d’Aval et l’Aiguille sous deux angles. Restez sur les chemins balisés, loin des bords, et respectez toute fermeture.
               </p>
             </Card>
 
@@ -178,6 +179,8 @@ export default function QueFaireEtretatPage() {
               </Button>
               <Button asChild variant="outline">
                 <Link href="/marees-etretat/">Guide des marées</Link>
+              </Button>
+              <Button asChild variant="outline"><Link href="/galets-etretat/">Comprendre et protéger les galets</Link>
               </Button>
               <Button asChild variant="outline">
                 <Link href="/parking-etretat/">Guide du parking</Link>

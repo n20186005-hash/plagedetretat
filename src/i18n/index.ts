@@ -23,8 +23,8 @@ i18n
       it: { translation: it },
       es: { translation: es },
     },
-    fallbackLng: "zh-TW",
-    debug: true,
+    fallbackLng: "fr",
+    debug: false,
     interpolation: {
       escapeValue: false,
     },

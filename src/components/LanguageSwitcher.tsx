@@ -26,7 +26,7 @@ export function LanguageSwitcher() {
 
   const handleLanguageChange = (code: string) => {
     setIsOpen(false);
-    window.location.href = buildLocalizedPath(code, normalizePath(location));
+    window.location.assign(buildLocalizedPath(code, normalizePath(location)));
   };
 
   return (

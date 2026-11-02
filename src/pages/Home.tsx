@@ -45,6 +45,7 @@ import {
 } from "@/components/ui/carousel";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { CoastalNotice } from "@/components/CoastalNotice";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 interface HomeProps {
@@ -125,7 +126,7 @@ export default function Home({ targetSection }: HomeProps) {
                 </a>
               </Button>
               <Button asChild className="md:hidden" size="sm">
-                <a href="#map" onClick={(e) => e.preventDefault()}>
+                <a href="#map" aria-label={t("nav.map")}>
                   <MapPinned className="h-4 w-4" />
                 </a>
               </Button>
@@ -136,11 +137,12 @@ export default function Home({ targetSection }: HomeProps) {
 
       {/* HERO */}
       <main>
+        <CoastalNotice />
         <section className="relative">
           <div className="mx-auto max-w-6xl px-4 py-10 sm:py-16">
             <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
               <motion.div
-                initial={{ opacity: 0, y: 14 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
                 className="relative"
@@ -158,7 +160,7 @@ export default function Home({ targetSection }: HomeProps) {
                 </div>
 
                 <h1 className="mt-5 text-5xl sm:text-6xl leading-[0.9]">
-                  {t('hero.title')}
+                  {t('hero.title')}{' '}
                   <span className="block">{t('hero.title_line2')}</span>
                 </h1>
 
@@ -231,7 +233,7 @@ export default function Home({ targetSection }: HomeProps) {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 14 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.08 }}
                 className="relative"
@@ -264,6 +266,7 @@ export default function Home({ targetSection }: HomeProps) {
         </section>
 
         {/* OVERVIEW */}
+        {i18n.language === "fr" && <div className="mx-auto max-w-6xl px-4 pb-6"><Link className="underline" href="/galets-etretat/">Galets d’Étretat : pourquoi les laisser sur la plage ?</Link></div>}
         <section id="overview" className="scroll-mt-24">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
             <SectionTitle
@@ -443,7 +446,7 @@ export default function Home({ targetSection }: HomeProps) {
             </div>
 
             <div className="mb-8">
-              <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">{t('map.title')}</h1>
+              <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">{t('map.title')}</h2>
               <p className="mt-3 text-lg text-muted-foreground max-w-2xl">{t('map.desc')}</p>
             </div>
 

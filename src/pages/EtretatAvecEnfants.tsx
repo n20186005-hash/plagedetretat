@@ -1,3 +1,4 @@
+import { CoastalNotice } from "@/components/CoastalNotice";
 import { Link } from "wouter";
 import { ArrowUpRight, Footprints, ShieldAlert, Waves } from "lucide-react";
 
@@ -7,7 +8,7 @@ import { Card } from "@/components/ui/card";
 
 const familyTips = [
   "Prévoir des chaussures stables, car les galets fatiguent plus vite les plus petits.",
-  "Éviter les longues marches au pied des falaises si la marée est incertaine.",
+  "Ne pas marcher au pied des falaises ni entrer dans les tunnels, même à marée basse.",
   "Privilégier un rythme simple : plage, pause, point de vue, retour.",
   "Garder une marge de temps pour le vent, les toilettes, les pauses goûter et le retour au parking.",
 ] as const;
@@ -15,11 +16,12 @@ const familyTips = [
 export default function EtretatAvecEnfantsPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <CoastalNotice />
       <section className="border-b bg-card/35">
         <div className="mx-auto max-w-5xl px-4 py-12 sm:py-16">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="secondary" className="rounded-full">Étretat avec enfants</Badge>
-            <Badge variant="secondary" className="rounded-full">Dernière vérification : 4 octobre 2026</Badge>
+            <Badge variant="secondary" className="rounded-full">Dernière vérification : 2 novembre 2026</Badge>
           </div>
 
           <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
@@ -65,7 +67,7 @@ export default function EtretatAvecEnfantsPage() {
                 Ce qu&apos;il faut surveiller
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Les marées restent le premier paramètre de sécurité dès qu&apos;on s&apos;approche du pied des falaises ou des rochers.
+                Restez dans les espaces ouverts au public. Pour les plages du littoral communal, la zone au droit de la digue promenade est l’exception à l’interdiction d’accès. Le Trou à l’Homme, la Chambre des demoiselles, la descente au Chaudron et les tunnels traversant les pointes des falaises restent interdits à basse mer.
               </p>
             </Card>
 

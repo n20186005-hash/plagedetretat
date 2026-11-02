@@ -1,3 +1,4 @@
+import { CoastalNotice } from "@/components/CoastalNotice";
 import { Link } from "wouter";
 import { ArrowUpRight, Camera, Church, Mountain, Route } from "lucide-react";
 
@@ -18,7 +19,7 @@ const viewpoints = [
   },
   {
     title: "Chapelle Notre-Dame-de-la-Garde",
-    description: "Une halte courte, mais très rentable pour la vue et l'orientation générale du site.",
+    description: "Un repère sur la falaise d’Amont à observer de l’extérieur ; ne supposez pas que la chapelle est ouverte à la visite.",
     icon: Church,
   },
 ] as const;
@@ -26,11 +27,12 @@ const viewpoints = [
 export default function FalaisesEtretatPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <CoastalNotice />
       <section className="border-b bg-card/35">
         <div className="mx-auto max-w-5xl px-4 py-12 sm:py-16">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="secondary" className="rounded-full">Falaises d&apos;Étretat</Badge>
-            <Badge variant="secondary" className="rounded-full">Dernière vérification : 4 octobre 2026</Badge>
+            <Badge variant="secondary" className="rounded-full">Dernière vérification : 2 novembre 2026</Badge>
           </div>
 
           <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
@@ -110,7 +112,7 @@ export default function FalaisesEtretatPage() {
             <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               Vérifiez le vent, la lumière et votre marge de temps. Si vous combinez falaises, plage et centre-ville,
               commencez généralement par les hauteurs ou terminez-y la journée pour profiter d&apos;une lumière plus douce.
-              Et si vous voulez descendre ensuite sur l&apos;estran, regardez les marées avant de bouger.
+              Ne descendez pas sous les falaises ou dans les tunnels. La marée basse ne constitue pas une autorisation ; respectez les barrières et les chemins ouverts.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Button asChild variant="outline">

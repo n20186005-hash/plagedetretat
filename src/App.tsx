@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { SEO } from "@/components/SEO";
+import GaletsEtretatPage from "@/pages/GaletsEtretat";
 import Home from "@/pages/Home";
 import { PrivacyPage } from "@/pages/Privacy";
 import { TermsPage } from "@/pages/Terms";
@@ -22,7 +23,7 @@ import PointsPhotoEtretatPage from "@/pages/PointsPhotoEtretat";
 import EtretatAvecEnfantsPage from "@/pages/EtretatAvecEnfants";
 import { LANGUAGE_PREFIXES } from "@/lib/site";
 
-function AppRouter() {
+export function AppRouter() {
   const [location] = useLocation();
   const { i18n } = useTranslation();
 
@@ -56,6 +57,7 @@ function AppRouter() {
         <Route path="/privacy/" component={PrivacyPage} />
         <Route path="/terms/" component={TermsPage} />
         <Route path="/cookies/" component={CookiesPage} />
+        <Route path="/galets-etretat/">{() => (i18n.language === "fr" ? <GaletsEtretatPage /> : <NotFoundPage />)}</Route>
         <Route path="/que-faire-etretat/">
           {() => (i18n.language === "fr" ? <QueFaireEtretatPage /> : <NotFoundPage />)}
         </Route>
