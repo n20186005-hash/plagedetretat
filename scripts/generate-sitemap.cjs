@@ -12,6 +12,7 @@ const languages = [
 ];
 
 const routes = [
+  { path: '/galets-etretat/', priority: '0.7', freq: 'monthly', languages: ['fr'] },
   {
     path: '/',
     priority: '1.0',

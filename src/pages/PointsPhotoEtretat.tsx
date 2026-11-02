@@ -1,3 +1,4 @@
+import { CoastalNotice } from "@/components/CoastalNotice";
 import { Link } from "wouter";
 import { ArrowUpRight, Camera, Mountain, Sun, Waves } from "lucide-react";
 
@@ -13,9 +14,9 @@ const photoSpots = [
     icon: Mountain,
   },
   {
-    title: "Plage à marée basse",
-    description: "Utile pour photographier les arches de plus près, à condition de respecter le timing des marées.",
-    timing: "Fenêtre de basse mer",
+    title: "Digue promenade",
+    description: "Cadrez les galets et la baie depuis la promenade ; restez dans les espaces autorisés sans rejoindre le pied des falaises.",
+    timing: "Selon la lumière et les conditions sur place",
     icon: Waves,
   },
   {
@@ -29,11 +30,12 @@ const photoSpots = [
 export default function PointsPhotoEtretatPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <CoastalNotice />
       <section className="border-b bg-card/35">
         <div className="mx-auto max-w-5xl px-4 py-12 sm:py-16">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="secondary" className="rounded-full">Points photo à Étretat</Badge>
-            <Badge variant="secondary" className="rounded-full">Dernière vérification : 4 octobre 2026</Badge>
+            <Badge variant="secondary" className="rounded-full">Dernière vérification : 2 novembre 2026</Badge>
           </div>
 
           <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
@@ -42,8 +44,7 @@ export default function PointsPhotoEtretatPage() {
 
           <p className="mt-5 max-w-3xl text-base text-muted-foreground sm:text-lg">
             À Étretat, toutes les belles vues ne donnent pas forcément de bonnes photos. Cette page sert à distinguer
-            les endroits qui fonctionnent vraiment selon votre objectif : grande vue d&apos;ensemble, arches vues de près,
-            lumière douce, marée basse ou coucher de soleil.
+            les cadrages selon votre objectif : vue d’ensemble de la baie, galets au premier plan ou lumière douce, depuis les espaces ouverts au public.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -100,8 +101,7 @@ export default function PointsPhotoEtretatPage() {
                 Le piège le plus courant
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Beaucoup de visiteurs veulent descendre trop tard sur la plage pour gagner un angle plus bas. Si la marée
-                remonte ou si le temps manque, mieux vaut sécuriser un point haut que forcer un spot risqué.
+                Un angle inédit ne justifie jamais de passer une barrière, de descendre sous les falaises ou d’entrer dans un tunnel. Ces secteurs restent interdits à marée basse. Si un point de vue est fermé, choisissez la promenade ouverte ou renoncez au cadrage.
               </p>
             </Card>
           </div>

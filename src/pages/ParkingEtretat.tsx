@@ -1,3 +1,4 @@
+import { CoastalNotice } from "@/components/CoastalNotice";
 import { Link } from "wouter";
 import { ArrowUpRight, MapPinned, ParkingCircle, Route } from "lucide-react";
 
@@ -15,11 +16,12 @@ const parkingTips = [
 export default function ParkingEtretatPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <CoastalNotice />
       <section className="border-b bg-card/35">
         <div className="mx-auto max-w-5xl px-4 py-12 sm:py-16">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="secondary" className="rounded-full">Parking à Étretat</Badge>
-            <Badge variant="secondary" className="rounded-full">Dernière vérification : 4 octobre 2026</Badge>
+            <Badge variant="secondary" className="rounded-full">Dernière vérification : 2 novembre 2026</Badge>
           </div>
 
           <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
@@ -54,7 +56,7 @@ export default function ParkingEtretatPage() {
                 Le bon réflexe
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Viser un parking extérieur puis marcher 10 à 15 minutes jusqu&apos;au front de mer est souvent plus efficace
+                Viser un parking autorisé à l’extérieur puis marcher jusqu&apos;au front de mer peut être plus pratique
                 que d&apos;insister dans le centre.
               </p>
             </Card>

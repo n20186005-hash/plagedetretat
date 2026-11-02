@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'wouter';
 import { DEFAULT_LANGUAGE, getAbsoluteUrl, getLanguageConfig, normalizePath, SITE_URL, SUPPORTED_LANGUAGES, type SupportedLanguageCode } from '@/lib/site';
 
+import { sectionRoutes } from "@/lib/routes";
+
 type PageMetadata = {
   titles: Partial<Record<SupportedLanguageCode, string>>;
   descriptions: Partial<Record<SupportedLanguageCode, string>>;
@@ -14,18 +16,19 @@ type PageMetadata = {
 export function SEO() {
   const { i18n, t } = useTranslation();
   const [location] = useLocation();
-  const normalizedPath = normalizePath(location);
+  const requestPath = normalizePath(location);
+  const normalizedPath = sectionRoutes.includes(requestPath) ? "/" : requestPath;
   const currentLanguage = getLanguageConfig(i18n.language).code;
   const currentHtmlLang = getLanguageConfig(currentLanguage).htmlLang;
 
   const sharedDescriptions: Record<SupportedLanguageCode, string> = {
-    fr: "Préparez votre visite à la plage d'Étretat : accès, marées, parking, baignade, falaises d'Aval et d'Amont, conseils sécurité et meilleurs points de vue.",
-    en: "Plan your visit to Étretat Beach with practical information on cliffs, tides, parking, viewpoints, swimming, and visitor tips.",
-    de: "Planen Sie Ihren Besuch am Strand von Étretat mit Tipps zu Klippen, Gezeiten, Parken, Aussichtspunkten und Sicherheit.",
-    nl: "Bereid uw bezoek aan Étretat voor met praktische tips over strand, kliffen, getijden, parkeren en uitzichtpunten.",
-    it: "Organizza la visita a Étretat con informazioni pratiche su spiaggia, falesie, maree, parcheggio e punti panoramici.",
-    es: "Planifica tu visita a Étretat con información práctica sobre playa, acantilados, mareas, parking y miradores.",
-    "zh-TW": "規劃埃特雷塔海灘之旅：懸崖、潮汐、停車、觀景點、步行與安全提醒一次看懂。",
+    fr: "Visitez Étretat : parking, marées et points de vue. Promenades uniquement dans les zones ouvertes et autorisées ; respectez les restrictions locales.",
+    en: "Visit Étretat with parking, tides and viewpoints. Walk only in open, authorised areas and follow local access restrictions.",
+    de: "Étretat besuchen: Parken, Gezeiten und Aussichtspunkte. Nutzen Sie nur geöffnete, freigegebene Bereiche und beachten Sie örtliche Sperrungen.",
+    nl: "Bezoek Étretat: parkeren, getijden en uitzichtpunten. Wandel alleen in geopende, toegestane gebieden en volg lokale afsluitingen.",
+    it: "Visitate Étretat: parcheggi, maree e panorami. Camminate solo nelle aree aperte e autorizzate e rispettate le restrizioni locali.",
+    es: "Visite Étretat: aparcamiento, mareas y miradores. Camine solo por zonas abiertas y autorizadas y respete las restricciones locales.",
+    "zh-TW": "規劃埃特雷塔之旅：停車、潮汐與觀景點。步行僅限開放且允許進入的區域，請遵守現場指示及封閉限制。",
   };
 
   const pageMetadata: Record<string, PageMetadata> = {
@@ -136,12 +139,18 @@ export function SEO() {
         "zh-TW": t("cookies.section1_content"),
       },
     },
+    "/galets-etretat/": {
+      titles: { fr: "Galets d’Étretat : protection, ramassage interdit et observation" },
+      descriptions: { fr: "Pourquoi laisser les galets d’Étretat sur la plage : rôle protecteur, interdiction du ramassage et idées d’observation depuis les espaces autorisés." },
+      supportedLanguages: ["fr"],
+      breadcrumbLabel: { fr: "Galets d’Étretat" },
+    },
     "/que-faire-etretat/": {
       titles: {
-        fr: "Que faire à Étretat ? 12 lieux à voir et conseils de visite",
+        fr: "Que faire à Étretat ? 6 étapes à découvrir et conseils de visite",
       },
       descriptions: {
-        fr: "Organisez votre journée à Étretat avec 12 lieux à voir, les meilleures vues sur les falaises, des idées d'itinéraire, des conseils parking et marées.",
+        fr: "Organisez votre journée à Étretat avec 6 étapes à découvrir, les meilleures vues sur les falaises, des idées d'itinéraire, des conseils parking et marées.",
       },
       supportedLanguages: ["fr"],
       breadcrumbLabel: {
@@ -150,10 +159,10 @@ export function SEO() {
     },
     "/marees-etretat/": {
       titles: {
-        fr: "Marées à Étretat : horaires, sécurité et meilleur moment pour la plage",
+        fr: "Marées à Étretat : horaires officiels et accès réglementés",
       },
       descriptions: {
-        fr: "Comprenez les marées à Étretat avant votre visite : quand aller sur la plage, quelles précautions prendre et pourquoi la basse mer change toute l'expérience.",
+        fr: "Consultez les horaires de marée d’Étretat et distinguez le niveau de la mer des accès autorisés : la basse mer ne lève pas les interdictions du littoral.",
       },
       supportedLanguages: ["fr"],
       breadcrumbLabel: {
@@ -201,7 +210,7 @@ export function SEO() {
         fr: "Points photo à Étretat : meilleurs spots, lumière et conseils de cadrage",
       },
       descriptions: {
-        fr: "Repérez les meilleurs points photo à Étretat : falaises, plage à marée basse, lumière de fin de journée et vues panoramiques.",
+        fr: "Repérez les meilleurs points photo à Étretat : promenade, points de vue autorisés, lumière de fin de journée et vues panoramiques.",
       },
       supportedLanguages: ["fr"],
       breadcrumbLabel: {
@@ -228,7 +237,7 @@ export function SEO() {
   const title = routeMetadata?.titles?.[metadataLanguage] ?? "Plage d'Étretat";
   const description = routeMetadata?.descriptions?.[metadataLanguage] ?? sharedDescriptions[metadataLanguage];
   const canonicalUrl = getAbsoluteUrl(metadataLanguage, normalizedPath);
-  const robots = routeMetadata && !supportsCurrentLanguage ? "noindex, follow" : undefined;
+  const robots = !routeMetadata || !supportsCurrentLanguage ? "noindex, follow" : undefined;
   const alternateLanguages = routeMetadata?.supportedLanguages ?? SUPPORTED_LANGUAGES.map((language) => language.code);
 
   const structuredData: Array<Record<string, unknown>> = [
@@ -283,6 +292,7 @@ export function SEO() {
   }
 
   if (
+    normalizedPath === "/galets-etretat/" ||
     normalizedPath === "/que-faire-etretat/" ||
     normalizedPath === "/marees-etretat/" ||
     normalizedPath === "/parking-etretat/" ||
